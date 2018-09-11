@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Before running application" > /tmp/dupa
+#exec /usr/libexec/s2i/run
