@@ -5,6 +5,6 @@ echo "WORDPRESS_DB_USER $WORDPRESS_DB_USER" >> /tmp/output
 echo "WORDPRESS_DB_PASSWORD $WORDPRESS_DB_PASSWORD" >> /tmp/output
 echo "WORDPRESS_DB_NAME $WORDPRESS_DB_NAME" >> /tmp/output
 echo "WORDPRESS_DB_HOST $WORDPRESS_DB_HOST" >> /tmp/output
-
+envsubst '${WORDPRESS_DB_USER} ${WORDPRESS_DB_PASSWORD} ${WORDPRESS_DB_NAME} ${WORDPRESS_DB_HOST}'  < wp-config-sample.php >  wp-config.php
 
 exec /usr/libexec/s2i/run
